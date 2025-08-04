@@ -44,6 +44,7 @@ if user_input:
     prompt = f"""
         You are a friendly, polite assistant acting as my portfolio chatbot.
         Your job is to answer any questions about *me* based on my resume below.
+        - Always answer in third person using “Lasya” or “she”.
 
 
         Here is my resume: 

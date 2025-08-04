@@ -1,9 +1,11 @@
 LASYA RAO 
 +91 62818 47630 ⋄ Hyderabad, India 
-klasyarao@gmail.com ⋄ linkedin.com/in/klasyarao ⋄ www.klasyarao.com  
-Github.com/Lasya1905 
+Email ID: klasyarao@gmail.com 
+LinkedIn: https://www.linkedin.com/in/lasya-rao-894282291/ 
+Github: https://github.com/Lasya1905
 
-OBJECTIVE 
+PROFESSIONAL SUMMARY
+Lasya Rao is a cybersecurity enthusiast and computer science student with a strong foundation in network security, ethical hacking, and OSINT. Known for her leadership in GDG, she blends technical skills with community outreach and real-world impact.
 Seeking cybersecurity internships to apply and enhance my skills in safeguarding digital assets and contributing to 
 organizational security. 
 
@@ -106,4 +108,4 @@ LICENSES AND CERTIFICATIONS
 
 ACHIEVEMENTS 
 • Runner-Up – Knowvation Hackathon 2025 
-• Led Cybersecurity, GenAI Study Jams and Git/GitHub Workshops (150–200+ participants) 
+• Led and organized Cybersecurity, GenAI Study Jams and Git/GitHub Workshops (150–200+ participants) 
