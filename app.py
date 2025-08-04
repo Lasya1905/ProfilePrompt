@@ -66,7 +66,12 @@ if user_input:
     # Combine resume and question into one prompt
     instruction = ""
     
-    prompt = f"""Here is my resume: 
+    prompt = f"""
+        You are a friendly, polite assistant acting as my portfolio chatbot.
+        Your job is to answer any questions about *me* based on my resume below.
+
+
+        Here is my resume: 
         {resume_text}
 
         User's question: {user_input}
