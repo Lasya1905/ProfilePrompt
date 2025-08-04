@@ -1,0 +1,96 @@
+import os
+from dotenv import load_dotenv
+import streamlit as st
+import google.generativeai as genai
+
+
+load_dotenv()
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
+
+with open("resume.txt", "r", encoding="utf-8") as file:
+    resume_text = file.read()
+
+
+model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
+
+# Streamlit App
+st.title("Chatbot Portfolio")
+st.subheader("Hi, I am Lasya's AI Assistant. How can I help you today?")
+
+# Initialize chat history if it doesn't exist
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+# Display previous messages
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
+# Input box
+user_input = st.chat_input("Type your question here... (e.g., internships, projects, skills)")
+st.markdown("🤖 Suggested Questions")
+suggested_questions = ["What are Lasya's key technical skills?",
+    "Tell me about Lasya's cybersecurity experience.",
+    "What internships has Lasya done?",
+    "List projects mentioned in the resume.",
+    "Summarize her educational background."
+]
+
+for question in suggested_questions:
+    if st.button(question):
+        user_input = question
+        st.session_state.messages.append({"role": "user", "content": user_input})
+        with st.chat_message("user"):
+            st.markdown(user_input)
+
+            prompt = f"""Here is my resume:
+            {resume_text}
+            User's question: {user_input}
+            Now answer the question based on the resume.
+            """
+        response = model.generate_content(prompt)
+        with st.chat_message("assistant"):
+            st.markdown(response.text)
+
+        st.session_state.messages.append({"role": "assistant", "content": response.text}) # Stop further processing after button click
+        st.stop()  # Stop further processing after button click
+
+# Handle new input
+if user_input:
+    # Add user message to session state
+    st.session_state.messages.append({"role": "user", "content": user_input})
+    with st.chat_message("user"):
+        st.markdown(user_input)
+
+    # Combine resume and question into one prompt
+    instruction = ""
+    
+    prompt = f"""Here is my resume: 
+        {resume_text}
+
+        User's question: {user_input}
+    """
+
+    # Generate response from Gemini model
+    response = model.generate_content(prompt)
+
+    # Show response
+    with st.chat_message("assistant"):
+        st.markdown(response.text)
+
+    # Add assistant's response to session state
+    st.session_state.messages.append({"role": "assistant", "content": response.text})
+
+
+
+# Sidebar
+st.sidebar.title("Lasya Rao")
+st.sidebar.image("image.png")
+st.sidebar.markdown("Currently Interning as a Cybersecurity Intern at Women Safety Wing, Telangana Police")
+st.sidebar.markdown("🎓 B.Tech CSE | IARE Hyderabad")
+st.sidebar.markdown("🌐 [GitHub](https://github.com/Lasya1905)")
+st.sidebar.markdown("🔗 [LinkedIn](https://www.linkedin.com/in/lasya-rao-894282291/)")
+st.sidebar.markdown("📫 [Email](mailto:klasyarao@gmail.com)")
+with open("cyberresume.pdf","rb") as file:
+    st.sidebar.download_button("Download Resume", file, "cyberresume.pdf")

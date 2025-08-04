@@ -1,0 +1,109 @@
+LASYA RAO 
++91 62818 47630 ⋄ Hyderabad, India 
+klasyarao@gmail.com ⋄ linkedin.com/in/klasyarao ⋄ www.klasyarao.com  
+Github.com/Lasya1905 
+
+OBJECTIVE 
+Seeking cybersecurity internships to apply and enhance my skills in safeguarding digital assets and contributing to 
+organizational security. 
+
+EDUCATION 
+Institute of Aeronautical Engineering 
+B. Tech in Computer Science and Engineering, CGPA: 9.25 (Till III. Sem). 
+Expected 2027 
+PR/Outreach Lead – Google Developer Groups on Campus 
+Technical Lead at E-Cell, the college technical club. 
+
+SKILLS 
+Languages: Python, C, Java, SQL, JavaScript, HTML, CSS. 
+Tools: Kali Linux, Metasploit, Nmap, Wireshark. 
+
+PROFESSIONAL EXPERIENCE 
+
+Cybersecurity Intern 
+Women Safety Wing – Police Cyber Module, Hyderabad 
+July 2025 – August 2025 
+• Researched OSINT tools and emerging cybercrime trends targeting women and children. 
+• Assisted in real-time casework, gathering suspect data using phone numbers and digital footprint tracing. 
+• Gained hands-on experience with tools for email/identity discovery and metadata analysis. 
+• Developed a lightweight OSINT tool to extract geolocation and device details via image interaction. 
+
+Technical Lead – Entrepreneurship Cell (E-Cell) 
+Institute of Aeronautical Engineering, Hyderabad  
+Jan 2025 - Feb 2025 
+• Appointed as Technical Lead to drive all technology initiatives within the E-Cell, impacting 300+ students 
+through digital infrastructure and event platforms. 
+• Leading an 8-member technical team to develop and maintain web-based tools for event registration, data 
+tracking, and internal workflows, improving the efficiency and technical capabilities of E-Cell operations. 
+
+Cybersecurity Intern 
+EDUNET Foundation – IBM SkillsBuild  
+Jan 2025 - Feb 2025 
+• Developed a Python-based steganography tool (StegaPy), enabling secure transmission of hidden messages 
+in images; achieved >95% accuracy in message retrieval during testing. 
+• Completed over 20+ hands-on labs in IBM SkillsBuild, covering topics like threat modelling, network security, and 
+incident response. 
+
+Digital Operations and Growth Associate 
+Postdev.in  
+Sept 2024 – Present 
+• Under Training in Postdev Infosec, a pioneering PTaaS startup that delivers cutting-edge cybersecurity solutions 
+globally. 
+• Engaged in networking events, conferences, and trade shows to establish industry connections and generate 
+business leads. 
+
+Public Relations/Outreach Lead 
+Google Developer Groups on Campus  
+Sept 2024 – Present 
+• Spearheaded promotion for 10+ technical events, scaling attendance from 50 to 250+ students. 
+• Delivered workshops, webinars, and training programs on various domains including Cybersecurity topics, reaching a 
+wider audience. 
+• Facilitated partnerships with speakers and institutions to enhance event impact and reach. 
+
+PROJECTS 
+
+Cybersecurity Lab: Meta-Exploitation of Metasploitable VM  
+Skills: Vulnerability assessment, penetration testing, brute-force attacks  
+• Conducted reconnaissance with Nmap and exploited vulnerabilities (vsftpd, Samba, SSH) using Metasploit. 
+• Gained shell access, performed post-exploitation, and upgraded to an interactive TTY shell. 
+• Tools: Kali Linux, Metasploit, Nmap, Netcat. 
+
+CyberHelp Button – AI-based Deepfake Voice Detection (In Progress) 
+• Conceptualized and prototyped a mobile-first solution to detect AI voice deepfakes and impersonation during calls, 
+designed to function as an SOS tool for user safety. 
+• Selected as runner-up idea in Knowvation Hackathon, validating concept feasibility and user need. 
+
+StegaPyX – Steganography Tool  
+Skills: Python, OpenCV, Tkinter  
+• Developed a Python tool using OpenCV to hide and retrieve messages in images by modifying pixel values. 
+• Implemented GUI using Tkinter. 
+
+Portfolio Website  
+Skills: HTML, CSS, JavaScript  
+• A responsive personal portfolio website built using HTML and CSS, showcasing my projects, skills, and contact information. 
+April 2025 
+
+WeatherNow  
+Skills: HTML, CSS, JavaScript, API Integration  
+• A simple weather app that fetches real-time data using the OpenWeatherMap API. 
+March 2025 
+
+Real-Time Face Recognition System  
+Skills: Python and OpenCV  
+• Implemented real-time face recognition and detection to identify faces from images or video streams. 
+October 2024 
+
+Interactive Restaurant Web Interface with QR Integration  
+Skills: HTML, CSS, Bootstrap, Python  
+• Developed the front-end of a restaurant website and implemented Python-based QR code generation to direct customers to the website. 
+January 2024 
+
+LICENSES AND CERTIFICATIONS 
+• Coursera (Google): Cybersecurity Foundations, Security Risk Management, Network Security 
+• IBM SkillsBuild: Introduction to Cybersecurity (MDL-403), Cybersecurity Fundamentals 
+• NPTEL: Java Programming, Python Data Structures and Algorithms 
+• NxtWave: Static and Responsive Website Development, Database Fundamentals 
+
+ACHIEVEMENTS 
+• Runner-Up – Knowvation Hackathon 2025 
+• Led Cybersecurity, GenAI Study Jams and Git/GitHub Workshops (150–200+ participants) 
