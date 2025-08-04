@@ -29,32 +29,7 @@ for message in st.session_state.messages:
 
 # Input box
 user_input = st.chat_input("Type your question here... (e.g., internships, projects, skills)")
-st.markdown("🤖 Suggested Questions")
-suggested_questions = ["What are Lasya's key technical skills?",
-    "Tell me about Lasya's cybersecurity experience.",
-    "What internships has Lasya done?",
-    "List projects mentioned in the resume.",
-    "Summarize her educational background."
-]
 
-for question in suggested_questions:
-    if st.button(question):
-        user_input = question
-        st.session_state.messages.append({"role": "user", "content": user_input})
-        with st.chat_message("user"):
-            st.markdown(user_input)
-
-            prompt = f"""Here is my resume:
-            {resume_text}
-            User's question: {user_input}
-            Now answer the question based on the resume.
-            """
-        response = model.generate_content(prompt)
-        with st.chat_message("assistant"):
-            st.markdown(response.text)
-
-        st.session_state.messages.append({"role": "assistant", "content": response.text}) # Stop further processing after button click
-        st.stop()  # Stop further processing after button click
 
 # Handle new input
 if user_input:
@@ -87,6 +62,32 @@ if user_input:
     # Add assistant's response to session state
     st.session_state.messages.append({"role": "assistant", "content": response.text})
 
+    st.markdown("🤖 Suggested Questions")
+suggested_questions = ["What are Lasya's key technical skills?",
+    "Tell me about Lasya's cybersecurity experience.",
+    "What internships has Lasya done?",
+    "List projects mentioned in the resume.",
+    "Summarize her educational background."
+]
+
+for question in suggested_questions:
+    if st.button(question):
+        user_input = question
+        st.session_state.messages.append({"role": "user", "content": user_input})
+        with st.chat_message("user"):
+            st.markdown(user_input)
+
+            prompt = f"""Here is my resume:
+            {resume_text}
+            User's question: {user_input}
+            Now answer the question based on the resume.
+            """
+        response = model.generate_content(prompt)
+        with st.chat_message("assistant"):
+            st.markdown(response.text)
+
+        st.session_state.messages.append({"role": "assistant", "content": response.text}) # Stop further processing after button click
+        st.stop()  # Stop further processing after button click
 
 
 # Sidebar
