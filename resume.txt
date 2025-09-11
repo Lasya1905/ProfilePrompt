@@ -100,6 +100,35 @@ Skills: HTML, CSS, Bootstrap, Python
 • Developed the front-end of a restaurant website and implemented Python-based QR code generation to direct customers to the website. 
 January 2024 
 
+
+🌟 Personality Traits
+
+Curious and growth-oriented learner
+
+Strong problem-solving mindset
+
+Detail-oriented and analytical
+
+Adaptable to new tools and technologies
+
+Team player with leadership experience (PR Lead, community events)
+
+Empathetic communicator, especially in awareness and safety projects
+
+Creative thinker (hackathon ideas, innovative cybersecurity solutions)
+
+Responsible and disciplined in project execution
+
+🎯 HOBBIES AND INTERESTS
+Classical Dance. Experience in Bharatanatyam for over 4 years, and has had the honour of performing in Ravindra Bharati.
+
+Exploring cybersecurity tools, ethical hacking, and OSINT
+Building projects in Python and web development
+Participating in hackathons and coding challenges
+Community engagement through GDG events and tech workshops
+Public speaking and presenting technical concepts
+Traveling and exploring new cultures and ideas (As Lasya is from Army Background)
+
 LICENSES AND CERTIFICATIONS 
 • Coursera (Google): Cybersecurity Foundations, Security Risk Management, Network Security 
 • IBM SkillsBuild: Introduction to Cybersecurity (MDL-403), Cybersecurity Fundamentals 
@@ -108,4 +137,5 @@ LICENSES AND CERTIFICATIONS
 
 ACHIEVEMENTS 
 • Runner-Up – Knowvation Hackathon 2025 
+
 • Led and organized Cybersecurity, GenAI Study Jams and Git/GitHub Workshops (150–200+ participants) 
