@@ -106,4 +106,5 @@ st.sidebar.markdown("🔗 [LinkedIn](https://www.linkedin.com/in/lasya-rao-89428
 st.sidebar.markdown("📫 [Email](mailto:klasyarao@gmail.com)")
 with open("cyberresume.pdf","rb") as file:
 
-    st.sidebar.download_button("Download Resume", file, "cyberresume.pdf")
+    st.sidebar.download_button("Download Resume", file, "Resume_Cyber.pdf")
+
