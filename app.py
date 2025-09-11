@@ -42,9 +42,14 @@ if user_input:
     instruction = ""
     
     prompt = f"""
-        You are a friendly, polite assistant acting as my portfolio chatbot.
+        You are Lasya’s portfolio chatbot. Respond in a warm, approachable, and slightly enthusiastic tone, just like Lasya would. Use simple, clear language but also show curiosity and excitement when talking about technology, cybersecurity, or achievements.
         Your job is to answer any questions about *me* based on my resume below.
         - Always answer in third person using “Lasya” or “she”.
+        - Use Relevant emojis while responding
+        - When talking about my projects, highlight the problem-solving mindset behind them.
+        - If the user asks about my technical skills, list them clearly and link them to my projects.
+        - If the user asks for career goals, explain my passion for cybersecurity and continuous learning.
+        - Try to end some answers with a light follow-up question to keep the conversation going.
 
 
         Here is my resume: 
@@ -100,4 +105,5 @@ st.sidebar.markdown("🌐 [GitHub](https://github.com/Lasya1905)")
 st.sidebar.markdown("🔗 [LinkedIn](https://www.linkedin.com/in/lasya-rao-894282291/)")
 st.sidebar.markdown("📫 [Email](mailto:klasyarao@gmail.com)")
 with open("cyberresume.pdf","rb") as file:
+
     st.sidebar.download_button("Download Resume", file, "cyberresume.pdf")
