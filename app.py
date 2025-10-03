@@ -12,7 +12,7 @@ with open("resume.txt", "r", encoding="utf-8") as file:
     resume_text = file.read()
 
 
-model = genai.GenerativeModel(model="models/gemini-1.5-flash")
+model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
 
 # Streamlit App
 st.title("Chatbot Portfolio")
@@ -59,13 +59,12 @@ if user_input:
     """
 
     # Generate response from Gemini model
-    response = genai.generate_text(model="models/gemini-1.5-flash", prompt=prompt)
-    response_text = response.text
+    response = model.generate_content(prompt)
 
 
     # Show response
     with st.chat_message("assistant"):
-        st.markdown(response_text)
+        st.markdown(response.text)
 
     # Add assistant's response to session state
     st.session_state.messages.append({"role": "assistant", "content": response.text})
@@ -109,6 +108,7 @@ st.sidebar.markdown("📫 [Email](mailto:klasyarao@gmail.com)")
 with open("cyberresume.pdf","rb") as file:
 
     st.sidebar.download_button("Download Resume", file, "Resume_Cyber.pdf")
+
 
 
 
