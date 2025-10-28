@@ -39,8 +39,6 @@ if user_input:
         st.markdown(user_input)
 
     # Combine resume and question into one prompt
-    instruction = ""
-    
     prompt = f"""
         You are Lasya’s portfolio chatbot. Respond in a warm, approachable, and slightly enthusiastic tone, just like Lasya would. Use simple, clear language but also show curiosity and excitement when talking about technology, cybersecurity, or achievements.
         Your job is to answer any questions about *me* based on my resume below.
@@ -69,8 +67,10 @@ if user_input:
     # Add assistant's response to session state
     st.session_state.messages.append({"role": "assistant", "content": response.text})
 
-    st.markdown("🤖 Suggested Questions")
-suggested_questions = ["What are Lasya's key technical skills?",
+# Suggested Questions Section
+st.markdown("🤖 Suggested Questions")
+suggested_questions = [
+    "What are Lasya's key technical skills?",
     "Tell me about Lasya's cybersecurity experience.",
     "What internships has Lasya done?",
     "List projects mentioned in the resume.",
@@ -79,22 +79,41 @@ suggested_questions = ["What are Lasya's key technical skills?",
 
 for question in suggested_questions:
     if st.button(question):
-        user_input = question
-        st.session_state.messages.append({"role": "user", "content": user_input})
+        # Add user message to session state
+        st.session_state.messages.append({"role": "user", "content": question})
         with st.chat_message("user"):
-            st.markdown(user_input)
+            st.markdown(question)
 
-            prompt = f"""Here is my resume:
-            {resume_text}
-            User's question: {user_input}
-            Now answer the question based on the resume.
-            """
+        # Use the same detailed prompt as regular input
+        prompt = f"""
+        You are Lasya's portfolio chatbot. Respond in a warm, approachable, and slightly enthusiastic tone, just like Lasya would. Use simple, clear language but also show curiosity and excitement when talking about technology, cybersecurity, or achievements.
+        Your job is to answer any questions about *me* based on my resume below.
+        - Always answer in third person using "Lasya" or "she".
+        - Use Relevant emojis while responding
+        - When talking about my projects, highlight the problem-solving mindset behind them.
+        - If the user asks about my technical skills, list them clearly and link them to my projects.
+        - If the user asks for career goals, explain my passion for cybersecurity and continuous learning.
+        - Try to end some answers with a light follow-up question to keep the conversation going.
+
+
+        Here is my resume: 
+        {resume_text}
+
+        User's question: {question}
+        """
+        
+        # Generate response from Gemini model
         response = model.generate_content(prompt)
+        
+        # Show response
         with st.chat_message("assistant"):
             st.markdown(response.text)
 
-        st.session_state.messages.append({"role": "assistant", "content": response.text}) # Stop further processing after button click
-        st.stop()  # Stop further processing after button click
+        # Add assistant's response to session state
+        st.session_state.messages.append({"role": "assistant", "content": response.text})
+        
+        # Stop further processing after button click
+        st.rerun()
 
 
 # Sidebar
